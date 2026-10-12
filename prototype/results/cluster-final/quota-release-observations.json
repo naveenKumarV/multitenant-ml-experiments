@@ -1,0 +1,173 @@
+[
+  {
+    "job": "normal",
+    "time": "2026-10-12T09:47:16.303222+00:00",
+    "quota_reserved": false,
+    "remaining_pods": [
+      {
+        "name": "normal-0-p6jmn",
+        "phase": "Running",
+        "deleting": true
+      },
+      {
+        "name": "normal-1-9bhph",
+        "phase": "Running",
+        "deleting": true
+      }
+    ]
+  },
+  {
+    "job": "normal",
+    "time": "2026-10-12T09:47:20.359629+00:00",
+    "quota_reserved": false,
+    "remaining_pods": []
+  },
+  {
+    "job": "restart",
+    "time": "2026-10-12T09:47:23.454603+00:00",
+    "quota_reserved": false,
+    "remaining_pods": [
+      {
+        "name": "restart-0-k2x69",
+        "phase": "Running",
+        "deleting": true
+      },
+      {
+        "name": "restart-1-lv854",
+        "phase": "Running",
+        "deleting": true
+      }
+    ]
+  },
+  {
+    "job": "restart",
+    "time": "2026-10-12T09:47:29.344360+00:00",
+    "quota_reserved": false,
+    "remaining_pods": [
+      {
+        "name": "restart-0-6hz62",
+        "phase": "Running",
+        "deleting": true
+      },
+      {
+        "name": "restart-1-dbk4g",
+        "phase": "Running",
+        "deleting": true
+      }
+    ]
+  },
+  {
+    "job": "impossible",
+    "time": "2026-10-12T09:47:53.614834+00:00",
+    "quota_reserved": false,
+    "remaining_pods": []
+  },
+  {
+    "job": "impossible",
+    "time": "2026-10-12T09:47:53.648613+00:00",
+    "quota_reserved": false,
+    "remaining_pods": []
+  },
+  {
+    "job": "dev-nominal",
+    "time": "2026-10-12T09:48:03.600148+00:00",
+    "quota_reserved": false,
+    "remaining_pods": [
+      {
+        "name": "dev-nominal-0-8bd8m",
+        "phase": "Running",
+        "deleting": true
+      },
+      {
+        "name": "dev-nominal-1-njd57",
+        "phase": "Running",
+        "deleting": true
+      }
+    ]
+  },
+  {
+    "job": "prod-nominal",
+    "time": "2026-10-12T09:48:06.339305+00:00",
+    "quota_reserved": false,
+    "remaining_pods": [
+      {
+        "name": "prod-nominal-0-4m8sm",
+        "phase": "Running",
+        "deleting": true
+      },
+      {
+        "name": "prod-nominal-1-w52rz",
+        "phase": "Running",
+        "deleting": true
+      }
+    ]
+  },
+  {
+    "job": "prod-waits",
+    "time": "2026-10-12T09:48:09.495417+00:00",
+    "quota_reserved": false,
+    "remaining_pods": [
+      {
+        "name": "prod-waits-0-wh5dm",
+        "phase": "Running",
+        "deleting": true
+      },
+      {
+        "name": "prod-waits-1-jl6fq",
+        "phase": "Running",
+        "deleting": true
+      }
+    ]
+  },
+  {
+    "job": "dev-reclaim",
+    "time": "2026-10-12T09:48:21.488070+00:00",
+    "quota_reserved": false,
+    "remaining_pods": [
+      {
+        "name": "dev-reclaim-0-gxjbv",
+        "phase": "Running",
+        "deleting": true
+      },
+      {
+        "name": "dev-reclaim-1-xncxg",
+        "phase": "Running",
+        "deleting": true
+      }
+    ]
+  },
+  {
+    "job": "prod-base",
+    "time": "2026-10-12T09:48:25.570140+00:00",
+    "quota_reserved": false,
+    "remaining_pods": [
+      {
+        "name": "prod-base-0-vkjdc",
+        "phase": "Running",
+        "deleting": true
+      },
+      {
+        "name": "prod-base-1-v4k8w",
+        "phase": "Running",
+        "deleting": true
+      }
+    ]
+  },
+  {
+    "job": "prod-borrow",
+    "time": "2026-10-12T09:48:28.415832+00:00",
+    "quota_reserved": false,
+    "remaining_pods": [
+      {
+        "name": "prod-borrow-0-bth5g",
+        "phase": "Running",
+        "deleting": true
+      },
+      {
+        "name": "prod-borrow-1-l4rll",
+        "phase": "Running",
+        "deleting": true
+      }
+    ]
+  }
+]

@@ -1,0 +1,33 @@
+[
+  {
+    "case": "reservation_before_admission",
+    "passed": true,
+    "quota_reserved": true,
+    "job_suspended": true,
+    "pod_count": 0
+  },
+  {
+    "case": "admission_flavor_and_group_propagation",
+    "passed": true,
+    "workers": 2,
+    "attempt": "6ed4e1ecafe48621"
+  },
+  {
+    "case": "cancellation",
+    "passed": true,
+    "pods_remaining": 0,
+    "quota_reserved": false
+  },
+  {
+    "case": "restart_between_podgroup_and_ready",
+    "passed": true,
+    "podgroup_reused": true
+  },
+  {
+    "case": "stale_ready_after_readmission",
+    "passed": true,
+    "old_attempt": "e89d21ad6f486f8e",
+    "new_attempt": "534c9e9f502a8e4f",
+    "http_conflict": 409
+  }
+]

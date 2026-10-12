@@ -1,0 +1,45 @@
+time="2026-10-12T02:55:38-07:00" level=warning msg="already running, ignoring"
+Set kubectl context to "kind-scholarly-prototype"
+v1.13.0: Pulling from volcanosh/vc-webhook-manager
+Digest: sha256:03e36eb220766397b4cd9c2f42bab8666661a0112fa9033ae9bd80d2a9611001
+Status: Image is up to date for volcanosh/vc-webhook-manager:v1.13.0
+docker.io/volcanosh/vc-webhook-manager:v1.13.0
+v1.13.0: Pulling from volcanosh/vc-controller-manager
+a4b6250e03bd: Pulling fs layer
+a4b6250e03bd: Download complete
+a4b6250e03bd: Pull complete
+3b11a24b6e16: Download complete
+Digest: sha256:8dd7ce0cef2df19afb14ba26bec90e2999a3c0397ebe5c9d75a5f68d1c80d242
+Status: Downloaded newer image for volcanosh/vc-controller-manager:v1.13.0
+docker.io/volcanosh/vc-controller-manager:v1.13.0
+v1.13.0: Pulling from volcanosh/vc-scheduler
+35d338ee92ab: Pulling fs layer
+35d338ee92ab: Download complete
+35d338ee92ab: Pull complete
+35a124fefbd1: Download complete
+Digest: sha256:b05b30b3c25eff5af77e1859f47fc6acfc3520d62dc2838f0623aa4309c40b34
+Status: Downloaded newer image for volcanosh/vc-scheduler:v1.13.0
+docker.io/volcanosh/vc-scheduler:v1.13.0
+1.37.0: Pulling from library/busybox
+af820adcc158: Pulling fs layer
+af820adcc158: Download complete
+af820adcc158: Pull complete
+9eac587a9921: Download complete
+Digest: sha256:bdf57e528e45e4433820e045b29b4597825a1c9e38353532d90a01445013f82e
+Status: Downloaded newer image for busybox:1.37.0
+docker.io/library/busybox:1.37.0
+Image: "docker.io/volcanosh/vc-webhook-manager:v1.13.0" with ID "sha256:03e36eb220766397b4cd9c2f42bab8666661a0112fa9033ae9bd80d2a9611001" not yet present on node "scholarly-prototype-control-plane", loading...
+Image: "docker.io/volcanosh/vc-webhook-manager:v1.13.0" with ID "sha256:03e36eb220766397b4cd9c2f42bab8666661a0112fa9033ae9bd80d2a9611001" not yet present on node "scholarly-prototype-worker2", loading...
+Image: "docker.io/volcanosh/vc-webhook-manager:v1.13.0" with ID "sha256:03e36eb220766397b4cd9c2f42bab8666661a0112fa9033ae9bd80d2a9611001" not yet present on node "scholarly-prototype-worker", loading...
+Image: "docker.io/volcanosh/vc-controller-manager:v1.13.0" with ID "sha256:8dd7ce0cef2df19afb14ba26bec90e2999a3c0397ebe5c9d75a5f68d1c80d242" not yet present on node "scholarly-prototype-control-plane", loading...
+Image: "docker.io/volcanosh/vc-controller-manager:v1.13.0" with ID "sha256:8dd7ce0cef2df19afb14ba26bec90e2999a3c0397ebe5c9d75a5f68d1c80d242" not yet present on node "scholarly-prototype-worker2", loading...
+Image: "docker.io/volcanosh/vc-controller-manager:v1.13.0" with ID "sha256:8dd7ce0cef2df19afb14ba26bec90e2999a3c0397ebe5c9d75a5f68d1c80d242" not yet present on node "scholarly-prototype-worker", loading...
+Image: "docker.io/volcanosh/vc-scheduler:v1.13.0" with ID "sha256:b05b30b3c25eff5af77e1859f47fc6acfc3520d62dc2838f0623aa4309c40b34" not yet present on node "scholarly-prototype-control-plane", loading...
+Image: "docker.io/volcanosh/vc-scheduler:v1.13.0" with ID "sha256:b05b30b3c25eff5af77e1859f47fc6acfc3520d62dc2838f0623aa4309c40b34" not yet present on node "scholarly-prototype-worker2", loading...
+Image: "docker.io/volcanosh/vc-scheduler:v1.13.0" with ID "sha256:b05b30b3c25eff5af77e1859f47fc6acfc3520d62dc2838f0623aa4309c40b34" not yet present on node "scholarly-prototype-worker", loading...
+Image: "docker.io/library/busybox:1.37.0" with ID "sha256:bdf57e528e45e4433820e045b29b4597825a1c9e38353532d90a01445013f82e" not yet present on node "scholarly-prototype-control-plane", loading...
+Image: "docker.io/library/busybox:1.37.0" with ID "sha256:bdf57e528e45e4433820e045b29b4597825a1c9e38353532d90a01445013f82e" not yet present on node "scholarly-prototype-worker2", loading...
+Image: "docker.io/library/busybox:1.37.0" with ID "sha256:bdf57e528e45e4433820e045b29b4597825a1c9e38353532d90a01445013f82e" not yet present on node "scholarly-prototype-worker", loading...
+ERROR: failed to load image: command "docker exec --privileged -i scholarly-prototype-worker ctr --namespace=k8s.io images import --all-platforms --digests --snapshotter=overlayfs -" failed with error: exit status 1
+
+Command Output: ctr: rpc error: code = NotFound desc = content digest sha256:27d6bd77a4455df23d12d79cd119f5925fa13168d796e3f6ad9381ffe8184c18: not found

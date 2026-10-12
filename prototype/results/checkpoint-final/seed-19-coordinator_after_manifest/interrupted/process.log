@@ -1,0 +1,54 @@
+W1012 02:42:12.122000 58712 .venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+W1012 02:42:12.977000 58712 .venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 58714 closing signal SIGTERM
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/Users/naveen/Documents/EB1A Scholarly Articles/ML Platform/papers/multitenant/review/prototype/src/checkpoint_worker.py", line 177, in <module>
+[rank1]:     main()
+[rank1]:   File "/Users/naveen/Documents/EB1A Scholarly Articles/ML Platform/papers/multitenant/review/prototype/src/checkpoint_worker.py", line 164, in main
+[rank1]:     checkpoint(step, a.interrupt)
+[rank1]:   File "/Users/naveen/Documents/EB1A Scholarly Articles/ML Platform/papers/multitenant/review/prototype/src/checkpoint_worker.py", line 137, in checkpoint
+[rank1]:     dist.broadcast_object_list(committed, src=0)
+[rank1]:   File "/Users/naveen/Documents/EB1A Scholarly Articles/ML Platform/papers/multitenant/review/prototype/.venv/lib/python3.12/site-packages/torch/distributed/c10d_logger.py", line 81, in wrapper
+[rank1]:     return func(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/Users/naveen/Documents/EB1A Scholarly Articles/ML Platform/papers/multitenant/review/prototype/.venv/lib/python3.12/site-packages/torch/distributed/distributed_c10d.py", line 3691, in broadcast_object_list
+[rank1]:     broadcast(object_sizes_tensor, group_src=group_src, group=group)
+[rank1]:   File "/Users/naveen/Documents/EB1A Scholarly Articles/ML Platform/papers/multitenant/review/prototype/.venv/lib/python3.12/site-packages/torch/distributed/c10d_logger.py", line 81, in wrapper
+[rank1]:     return func(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/Users/naveen/Documents/EB1A Scholarly Articles/ML Platform/papers/multitenant/review/prototype/.venv/lib/python3.12/site-packages/torch/distributed/distributed_c10d.py", line 2841, in broadcast
+[rank1]:     work.wait()
+[rank1]: RuntimeError: [/Users/runner/work/pytorch/pytorch/pytorch/third_party/gloo/gloo/transport/uv/unbound_buffer.cc:65] Timed out waiting 15000ms for recv operation to complete
+E1012 02:42:28.128000 58712 .venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/api.py:882] failed (exitcode: 18) local_rank: 0 (pid: 58713) of binary: /Users/naveen/Documents/EB1A Scholarly Articles/ML Platform/papers/multitenant/review/prototype/.venv/bin/python
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/naveen/Documents/EB1A Scholarly Articles/ML Platform/papers/multitenant/review/prototype/.venv/lib/python3.12/site-packages/torch/distributed/run.py", line 940, in <module>
+    main()
+  File "/Users/naveen/Documents/EB1A Scholarly Articles/ML Platform/papers/multitenant/review/prototype/.venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 357, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/naveen/Documents/EB1A Scholarly Articles/ML Platform/papers/multitenant/review/prototype/.venv/lib/python3.12/site-packages/torch/distributed/run.py", line 936, in main
+    run(args)
+  File "/Users/naveen/Documents/EB1A Scholarly Articles/ML Platform/papers/multitenant/review/prototype/.venv/lib/python3.12/site-packages/torch/distributed/run.py", line 927, in run
+    elastic_launch(
+  File "/Users/naveen/Documents/EB1A Scholarly Articles/ML Platform/papers/multitenant/review/prototype/.venv/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 156, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/naveen/Documents/EB1A Scholarly Articles/ML Platform/papers/multitenant/review/prototype/.venv/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 293, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/Users/naveen/Documents/EB1A Scholarly Articles/ML Platform/papers/multitenant/review/prototype/src/checkpoint_worker.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-10-12_02:42:12
+  host      : 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
+  rank      : 0 (local_rank: 0)
+  exitcode  : 18 (pid: 58713)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

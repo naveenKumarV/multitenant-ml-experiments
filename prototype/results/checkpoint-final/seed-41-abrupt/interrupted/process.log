@@ -1,0 +1,41 @@
+W1012 02:42:40.423000 58799 .venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+E1012 02:42:41.282000 58799 .venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/api.py:882] failed (exitcode: -9) local_rank: 0 (pid: 58800) of binary: /Users/naveen/Documents/EB1A Scholarly Articles/ML Platform/papers/multitenant/review/prototype/.venv/bin/python
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/naveen/Documents/EB1A Scholarly Articles/ML Platform/papers/multitenant/review/prototype/.venv/lib/python3.12/site-packages/torch/distributed/run.py", line 940, in <module>
+    main()
+  File "/Users/naveen/Documents/EB1A Scholarly Articles/ML Platform/papers/multitenant/review/prototype/.venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 357, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/naveen/Documents/EB1A Scholarly Articles/ML Platform/papers/multitenant/review/prototype/.venv/lib/python3.12/site-packages/torch/distributed/run.py", line 936, in main
+    run(args)
+  File "/Users/naveen/Documents/EB1A Scholarly Articles/ML Platform/papers/multitenant/review/prototype/.venv/lib/python3.12/site-packages/torch/distributed/run.py", line 927, in run
+    elastic_launch(
+  File "/Users/naveen/Documents/EB1A Scholarly Articles/ML Platform/papers/multitenant/review/prototype/.venv/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 156, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/naveen/Documents/EB1A Scholarly Articles/ML Platform/papers/multitenant/review/prototype/.venv/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 293, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/Users/naveen/Documents/EB1A Scholarly Articles/ML Platform/papers/multitenant/review/prototype/src/checkpoint_worker.py FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2026-10-12_02:42:41
+  host      : 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
+  rank      : 1 (local_rank: 1)
+  exitcode  : -9 (pid: 58801)
+  error_file: <N/A>
+  traceback : Signal 9 (SIGKILL) received by PID 58801
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-10-12_02:42:41
+  host      : 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
+  rank      : 0 (local_rank: 0)
+  exitcode  : -9 (pid: 58800)
+  error_file: <N/A>
+  traceback : Signal 9 (SIGKILL) received by PID 58800
+============================================================

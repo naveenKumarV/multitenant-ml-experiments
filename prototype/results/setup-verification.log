@@ -1,0 +1,160 @@
+time="2026-10-12T02:56:56-07:00" level=warning msg="already running, ignoring"
+Set kubectl context to "kind-scholarly-prototype"
+v1.13.0: Pulling from volcanosh/vc-webhook-manager
+Digest: sha256:03e36eb220766397b4cd9c2f42bab8666661a0112fa9033ae9bd80d2a9611001
+Status: Image is up to date for volcanosh/vc-webhook-manager:v1.13.0
+docker.io/volcanosh/vc-webhook-manager:v1.13.0
+v1.13.0: Pulling from volcanosh/vc-controller-manager
+Digest: sha256:8dd7ce0cef2df19afb14ba26bec90e2999a3c0397ebe5c9d75a5f68d1c80d242
+Status: Image is up to date for volcanosh/vc-controller-manager:v1.13.0
+docker.io/volcanosh/vc-controller-manager:v1.13.0
+v1.13.0: Pulling from volcanosh/vc-scheduler
+Digest: sha256:b05b30b3c25eff5af77e1859f47fc6acfc3520d62dc2838f0623aa4309c40b34
+Status: Image is up to date for volcanosh/vc-scheduler:v1.13.0
+docker.io/volcanosh/vc-scheduler:v1.13.0
+1.37.0: Pulling from library/busybox
+Digest: sha256:bdf57e528e45e4433820e045b29b4597825a1c9e38353532d90a01445013f82e
+Status: Image is up to date for busybox:1.37.0
+docker.io/library/busybox:1.37.0
+Pinned upstream manifest checksums verified.
+namespace/kueue-system serverside-applied
+customresourcedefinition.apiextensions.k8s.io/admissionchecks.kueue.x-k8s.io serverside-applied
+customresourcedefinition.apiextensions.k8s.io/clusterqueues.kueue.x-k8s.io serverside-applied
+customresourcedefinition.apiextensions.k8s.io/cohorts.kueue.x-k8s.io serverside-applied
+customresourcedefinition.apiextensions.k8s.io/localqueues.kueue.x-k8s.io serverside-applied
+customresourcedefinition.apiextensions.k8s.io/multikueueclusters.kueue.x-k8s.io serverside-applied
+customresourcedefinition.apiextensions.k8s.io/multikueueconfigs.kueue.x-k8s.io serverside-applied
+customresourcedefinition.apiextensions.k8s.io/provisioningrequestconfigs.kueue.x-k8s.io serverside-applied
+customresourcedefinition.apiextensions.k8s.io/resourceflavors.kueue.x-k8s.io serverside-applied
+customresourcedefinition.apiextensions.k8s.io/topologies.kueue.x-k8s.io serverside-applied
+customresourcedefinition.apiextensions.k8s.io/workloadpriorityclasses.kueue.x-k8s.io serverside-applied
+customresourcedefinition.apiextensions.k8s.io/workloads.kueue.x-k8s.io serverside-applied
+serviceaccount/kueue-controller-manager serverside-applied
+role.rbac.authorization.k8s.io/kueue-leader-election-role serverside-applied
+role.rbac.authorization.k8s.io/kueue-manager-clusterprofiles-role serverside-applied
+role.rbac.authorization.k8s.io/kueue-manager-secrets-role serverside-applied
+clusterrole.rbac.authorization.k8s.io/kueue-batch-admin-role serverside-applied
+clusterrole.rbac.authorization.k8s.io/kueue-batch-user-role serverside-applied
+clusterrole.rbac.authorization.k8s.io/kueue-clusterqueue-editor-role serverside-applied
+clusterrole.rbac.authorization.k8s.io/kueue-clusterqueue-viewer-role serverside-applied
+clusterrole.rbac.authorization.k8s.io/kueue-cohort-editor-role serverside-applied
+clusterrole.rbac.authorization.k8s.io/kueue-cohort-viewer-role serverside-applied
+clusterrole.rbac.authorization.k8s.io/kueue-jaxjob-editor-role serverside-applied
+clusterrole.rbac.authorization.k8s.io/kueue-jaxjob-viewer-role serverside-applied
+clusterrole.rbac.authorization.k8s.io/kueue-job-editor-role serverside-applied
+clusterrole.rbac.authorization.k8s.io/kueue-job-viewer-role serverside-applied
+clusterrole.rbac.authorization.k8s.io/kueue-jobset-editor-role serverside-applied
+clusterrole.rbac.authorization.k8s.io/kueue-jobset-viewer-role serverside-applied
+clusterrole.rbac.authorization.k8s.io/kueue-leaderworkerset-editor-role serverside-applied
+clusterrole.rbac.authorization.k8s.io/kueue-leaderworkerset-viewer-role serverside-applied
+clusterrole.rbac.authorization.k8s.io/kueue-localqueue-editor-role serverside-applied
+clusterrole.rbac.authorization.k8s.io/kueue-localqueue-viewer-role serverside-applied
+clusterrole.rbac.authorization.k8s.io/kueue-manager-role serverside-applied
+clusterrole.rbac.authorization.k8s.io/kueue-metrics-auth-role serverside-applied
+clusterrole.rbac.authorization.k8s.io/kueue-metrics-reader serverside-applied
+clusterrole.rbac.authorization.k8s.io/kueue-mpijob-editor-role serverside-applied
+clusterrole.rbac.authorization.k8s.io/kueue-mpijob-viewer-role serverside-applied
+clusterrole.rbac.authorization.k8s.io/kueue-paddlejob-editor-role serverside-applied
+clusterrole.rbac.authorization.k8s.io/kueue-paddlejob-viewer-role serverside-applied
+clusterrole.rbac.authorization.k8s.io/kueue-pending-workloads-cq-viewer-role serverside-applied
+clusterrole.rbac.authorization.k8s.io/kueue-pending-workloads-lq-viewer-role serverside-applied
+clusterrole.rbac.authorization.k8s.io/kueue-pytorchjob-editor-role serverside-applied
+clusterrole.rbac.authorization.k8s.io/kueue-pytorchjob-viewer-role serverside-applied
+clusterrole.rbac.authorization.k8s.io/kueue-raycluster-editor-role serverside-applied
+clusterrole.rbac.authorization.k8s.io/kueue-raycluster-viewer-role serverside-applied
+clusterrole.rbac.authorization.k8s.io/kueue-rayjob-editor-role serverside-applied
+clusterrole.rbac.authorization.k8s.io/kueue-rayjob-viewer-role serverside-applied
+clusterrole.rbac.authorization.k8s.io/kueue-rayservice-editor-role serverside-applied
+clusterrole.rbac.authorization.k8s.io/kueue-rayservice-viewer-role serverside-applied
+clusterrole.rbac.authorization.k8s.io/kueue-resourceflavor-editor-role serverside-applied
+clusterrole.rbac.authorization.k8s.io/kueue-resourceflavor-viewer-role serverside-applied
+clusterrole.rbac.authorization.k8s.io/kueue-sparkapplication-editor-role serverside-applied
+clusterrole.rbac.authorization.k8s.io/kueue-sparkapplication-viewer-role serverside-applied
+clusterrole.rbac.authorization.k8s.io/kueue-tfjob-editor-role serverside-applied
+clusterrole.rbac.authorization.k8s.io/kueue-tfjob-viewer-role serverside-applied
+clusterrole.rbac.authorization.k8s.io/kueue-topology-editor-role serverside-applied
+clusterrole.rbac.authorization.k8s.io/kueue-topology-viewer-role serverside-applied
+clusterrole.rbac.authorization.k8s.io/kueue-trainjob-editor-role serverside-applied
+clusterrole.rbac.authorization.k8s.io/kueue-trainjob-viewer-role serverside-applied
+clusterrole.rbac.authorization.k8s.io/kueue-workload-editor-role serverside-applied
+clusterrole.rbac.authorization.k8s.io/kueue-workload-viewer-role serverside-applied
+clusterrole.rbac.authorization.k8s.io/kueue-xgboostjob-editor-role serverside-applied
+clusterrole.rbac.authorization.k8s.io/kueue-xgboostjob-viewer-role serverside-applied
+rolebinding.rbac.authorization.k8s.io/kueue-visibility-server-auth-reader serverside-applied
+rolebinding.rbac.authorization.k8s.io/kueue-leader-election-rolebinding serverside-applied
+rolebinding.rbac.authorization.k8s.io/kueue-manager-clusterprofiles-rolebinding serverside-applied
+rolebinding.rbac.authorization.k8s.io/kueue-manager-secrets-rolebinding serverside-applied
+clusterrolebinding.rbac.authorization.k8s.io/kueue-manager-rolebinding serverside-applied
+clusterrolebinding.rbac.authorization.k8s.io/kueue-metrics-auth-rolebinding serverside-applied
+configmap/kueue-manager-config serverside-applied
+secret/kueue-webhook-server-cert serverside-applied
+service/kueue-controller-manager-metrics-service serverside-applied
+service/kueue-visibility-server serverside-applied
+service/kueue-webhook-service serverside-applied
+deployment.apps/kueue-controller-manager serverside-applied
+apiservice.apiregistration.k8s.io/v1beta1.visibility.kueue.x-k8s.io serverside-applied
+apiservice.apiregistration.k8s.io/v1beta2.visibility.kueue.x-k8s.io serverside-applied
+mutatingwebhookconfiguration.admissionregistration.k8s.io/kueue-mutating-webhook-configuration serverside-applied
+validatingwebhookconfiguration.admissionregistration.k8s.io/kueue-validating-webhook-configuration serverside-applied
+deployment "kueue-controller-manager" successfully rolled out
+namespace/volcano-system serverside-applied
+namespace/volcano-monitoring serverside-applied
+serviceaccount/volcano-admission serverside-applied
+configmap/volcano-admission-configmap serverside-applied
+clusterrole.rbac.authorization.k8s.io/volcano-admission serverside-applied
+clusterrolebinding.rbac.authorization.k8s.io/volcano-admission-role serverside-applied
+service/volcano-admission-service serverside-applied
+deployment.apps/volcano-admission serverside-applied
+serviceaccount/volcano-admission-init serverside-applied
+role.rbac.authorization.k8s.io/volcano-admission-init serverside-applied
+rolebinding.rbac.authorization.k8s.io/volcano-admission-init-role serverside-applied
+job.batch/volcano-admission-init serverside-applied
+customresourcedefinition.apiextensions.k8s.io/jobs.batch.volcano.sh serverside-applied
+customresourcedefinition.apiextensions.k8s.io/cronjobs.batch.volcano.sh serverside-applied
+customresourcedefinition.apiextensions.k8s.io/commands.bus.volcano.sh serverside-applied
+serviceaccount/volcano-controllers serverside-applied
+configmap/volcano-controller-configmap serverside-applied
+clusterrole.rbac.authorization.k8s.io/volcano-controllers serverside-applied
+clusterrolebinding.rbac.authorization.k8s.io/volcano-controllers-role serverside-applied
+service/volcano-controllers-service serverside-applied
+deployment.apps/volcano-controllers serverside-applied
+serviceaccount/volcano-scheduler serverside-applied
+configmap/volcano-scheduler-configmap serverside-applied
+clusterrole.rbac.authorization.k8s.io/volcano-scheduler serverside-applied
+clusterrolebinding.rbac.authorization.k8s.io/volcano-scheduler-role serverside-applied
+service/volcano-scheduler-service serverside-applied
+deployment.apps/volcano-scheduler serverside-applied
+customresourcedefinition.apiextensions.k8s.io/podgroups.scheduling.volcano.sh serverside-applied
+customresourcedefinition.apiextensions.k8s.io/queues.scheduling.volcano.sh serverside-applied
+customresourcedefinition.apiextensions.k8s.io/numatopologies.nodeinfo.volcano.sh serverside-applied
+customresourcedefinition.apiextensions.k8s.io/hypernodes.topology.volcano.sh serverside-applied
+mutatingwebhookconfiguration.admissionregistration.k8s.io/volcano-admission-service-queues-mutate serverside-applied
+mutatingwebhookconfiguration.admissionregistration.k8s.io/volcano-admission-service-jobs-mutate serverside-applied
+validatingwebhookconfiguration.admissionregistration.k8s.io/volcano-admission-service-jobs-validate serverside-applied
+validatingwebhookconfiguration.admissionregistration.k8s.io/volcano-admission-service-queues-validate serverside-applied
+validatingwebhookconfiguration.admissionregistration.k8s.io/volcano-admission-service-podgroups-validate serverside-applied
+validatingwebhookconfiguration.admissionregistration.k8s.io/volcano-admission-service-hypernodes-validate serverside-applied
+validatingwebhookconfiguration.admissionregistration.k8s.io/volcano-admission-service-cronjobs-validate serverside-applied
+customresourcedefinition.apiextensions.k8s.io/jobtemplates.flow.volcano.sh serverside-applied
+customresourcedefinition.apiextensions.k8s.io/jobflows.flow.volcano.sh serverside-applied
+deployment "volcano-admission" successfully rolled out
+deployment "volcano-scheduler" successfully rolled out
+namespace/prototype created
+Warning: This version is deprecated. Use v1beta2 instead.
+resourceflavor.kueue.x-k8s.io/synthetic-shared created
+admissioncheck.kueue.x-k8s.io/prototype-volcano created
+cohort.kueue.x-k8s.io/prototype created
+priorityclass.scheduling.k8s.io/prototype-prod created
+clusterqueue.kueue.x-k8s.io/prototype-prod created
+localqueue.kueue.x-k8s.io/prod created
+priorityclass.scheduling.k8s.io/prototype-dev created
+clusterqueue.kueue.x-k8s.io/prototype-dev created
+localqueue.kueue.x-k8s.io/dev created
+queue.scheduling.volcano.sh/prototype created
+Warning: resource configmaps/volcano-scheduler-configmap is missing the kubectl.kubernetes.io/last-applied-configuration annotation which is required by kubectl apply. kubectl apply should only be used on resources created declaratively by either kubectl create --save-config or kubectl apply. The missing annotation will be patched automatically.
+configmap/volcano-scheduler-configmap configured
+deployment.apps/volcano-scheduler restarted
+Configured 4 synthetic accelerator units across 2 workers; no physical GPUs.
+Waiting for deployment "volcano-scheduler" rollout to finish: 1 old replicas are pending termination...
+Waiting for deployment "volcano-scheduler" rollout to finish: 1 old replicas are pending termination...
+deployment "volcano-scheduler" successfully rolled out

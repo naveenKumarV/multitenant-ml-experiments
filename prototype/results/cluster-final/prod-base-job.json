@@ -1,0 +1,52 @@
+{
+  "apiVersion": "batch/v1",
+  "kind": "Job",
+  "metadata": {
+    "name": "prod-base",
+    "namespace": "prototype",
+    "labels": {
+      "kueue.x-k8s.io/queue-name": "prod"
+    }
+  },
+  "spec": {
+    "suspend": true,
+    "parallelism": 2,
+    "completions": 2,
+    "completionMode": "Indexed",
+    "backoffLimit": 0,
+    "template": {
+      "metadata": {
+        "labels": {
+          "prototype.example.com/job": "prod-base"
+        }
+      },
+      "spec": {
+        "schedulerName": "volcano",
+        "priorityClassName": "prototype-prod",
+        "restartPolicy": "Never",
+        "terminationGracePeriodSeconds": 5,
+        "containers": [
+          {
+            "name": "worker",
+            "image": "busybox:1.37.0",
+            "command": [
+              "sh",
+              "-c",
+              "trap \"echo SIGTERM_RECEIVED; sleep 2; echo FLUSH_FINISHED; exit 0\" TERM; echo WORKER_STARTED; while :; do sleep 1; done"
+            ],
+            "resources": {
+              "requests": {
+                "cpu": "50m",
+                "memory": "32Mi",
+                "example.com/accelerator": "1"
+              },
+              "limits": {
+                "example.com/accelerator": "1"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

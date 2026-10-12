@@ -1,0 +1,4 @@
+torch==2.9.1
+numpy==2.2.6
+kubernetes==33.1.0
+PyYAML==6.0.3

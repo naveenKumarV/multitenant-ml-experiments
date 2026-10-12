@@ -1,0 +1,26 @@
+{"event": "controller_started", "time": "2026-10-12T09:40:39.762185+00:00"}
+{"attempt": "6ed4e1ecafe48621", "event": "podgroup_created", "podgroup": "bridge-9616c2e6-6ed4e1ecafe48621", "time": "2026-10-12T09:40:39.772958+00:00", "workload": "job-normal-7f557"}
+{"attempt": "6ed4e1ecafe48621", "event": "check_written", "resource_version": "1673", "state": "Ready", "time": "2026-10-12T09:40:39.787322+00:00", "workload": "job-normal-7f557"}
+{"event": "controller_started", "time": "2026-10-12T09:40:46.961793+00:00"}
+{"attempt": "e89d21ad6f486f8e", "event": "podgroup_created", "podgroup": "bridge-56a777a4-e89d21ad6f486f8e", "time": "2026-10-12T09:40:46.988403+00:00", "workload": "job-restart-b8532"}
+{"event": "controller_started", "time": "2026-10-12T09:40:47.378351+00:00"}
+{"attempt": "e89d21ad6f486f8e", "event": "check_written", "resource_version": "1807", "state": "Ready", "time": "2026-10-12T09:40:47.415235+00:00", "workload": "job-restart-b8532"}
+{"attempt": "e89d21ad6f486f8e", "event": "stale_write_rejected", "resource_version": "1811", "time": "2026-10-12T09:40:51.727937+00:00", "workload": "job-restart-b8532"}
+{"event": "controller_started", "time": "2026-10-12T09:40:51.900030+00:00"}
+{"event": "podgroup_deleted", "podgroup": "bridge-56a777a4-e89d21ad6f486f8e", "time": "2026-10-12T09:40:51.908672+00:00", "workload": "job-restart-b8532"}
+{"attempt": "534c9e9f502a8e4f", "event": "podgroup_created", "podgroup": "bridge-56a777a4-534c9e9f502a8e4f", "time": "2026-10-12T09:40:51.911048+00:00", "workload": "job-restart-b8532"}
+{"attempt": "534c9e9f502a8e4f", "event": "check_written", "resource_version": "1889", "state": "Ready", "time": "2026-10-12T09:40:51.926716+00:00", "workload": "job-restart-b8532"}
+{"attempt": "1bae7ff8fde68d36", "event": "podgroup_created", "podgroup": "bridge-8edff314-1bae7ff8fde68d36", "time": "2026-10-12T09:40:55.870646+00:00", "workload": "job-impossible-1c0fb"}
+{"attempt": "1bae7ff8fde68d36", "event": "check_written", "resource_version": "1984", "state": "Ready", "time": "2026-10-12T09:40:55.884126+00:00", "workload": "job-impossible-1c0fb"}
+{"attempt": "1bae7ff8fde68d36", "event": "check_written", "resource_version": "1989", "state": "Retry", "time": "2026-10-12T09:41:15.272377+00:00", "workload": "job-impossible-1c0fb"}
+{"event": "podgroup_deleted", "podgroup": "bridge-8edff314-1bae7ff8fde68d36", "time": "2026-10-12T09:41:15.534829+00:00", "workload": "job-impossible-1c0fb"}
+{"attempt": "c49ce38d73e68029", "event": "podgroup_created", "podgroup": "bridge-8edff314-c49ce38d73e68029", "time": "2026-10-12T09:41:15.538307+00:00", "workload": "job-impossible-1c0fb"}
+{"attempt": "c49ce38d73e68029", "event": "check_written", "resource_version": "2096", "state": "Ready", "time": "2026-10-12T09:41:15.558018+00:00", "workload": "job-impossible-1c0fb"}
+{"attempt": "c49ce38d73e68029", "event": "check_written", "resource_version": "2103", "state": "Retry", "time": "2026-10-12T09:41:35.064240+00:00", "workload": "job-impossible-1c0fb"}
+{"event": "podgroup_deleted", "podgroup": "bridge-8edff314-c49ce38d73e68029", "time": "2026-10-12T09:41:35.326407+00:00", "workload": "job-impossible-1c0fb"}
+{"attempt": "5e81e3cf39411f20", "event": "podgroup_created", "podgroup": "bridge-8edff314-5e81e3cf39411f20", "time": "2026-10-12T09:41:35.329555+00:00", "workload": "job-impossible-1c0fb"}
+{"attempt": "5e81e3cf39411f20", "event": "check_written", "resource_version": "2203", "state": "Ready", "time": "2026-10-12T09:41:35.344387+00:00", "workload": "job-impossible-1c0fb"}
+{"attempt": "5e81e3cf39411f20", "event": "check_written", "resource_version": "2211", "state": "Retry", "time": "2026-10-12T09:41:55.175094+00:00", "workload": "job-impossible-1c0fb"}
+{"event": "podgroup_deleted", "podgroup": "bridge-8edff314-5e81e3cf39411f20", "time": "2026-10-12T09:41:55.438089+00:00", "workload": "job-impossible-1c0fb"}
+{"attempt": "4f30ef8ffdc65d25", "event": "podgroup_created", "podgroup": "bridge-8edff314-4f30ef8ffdc65d25", "time": "2026-10-12T09:41:55.441157+00:00", "workload": "job-impossible-1c0fb"}
+{"attempt": "4f30ef8ffdc65d25", "event": "check_written", "resource_version": "2311", "state": "Ready", "time": "2026-10-12T09:41:55.469541+00:00", "workload": "job-impossible-1c0fb"}

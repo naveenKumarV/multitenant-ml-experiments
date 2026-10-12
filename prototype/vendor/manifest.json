@@ -1,0 +1,10 @@
+{
+  "kueue-v0.17.0.yaml": {
+    "url": "https://github.com/kubernetes-sigs/kueue/releases/download/v0.17.0/manifests.yaml",
+    "sha256": "cb6b837a1d9520d6d53ff7bcb70b593280eedf699efdec59ae3a713f8a90f83d"
+  },
+  "volcano-v1.13.0.yaml": {
+    "url": "https://raw.githubusercontent.com/volcano-sh/volcano/v1.13.0/installer/volcano-development.yaml",
+    "sha256": "d9c36a587a6ac970f5d13e91f95fc53d1b21119b3781496f760b510aaf28b1ea"
+  }
+}

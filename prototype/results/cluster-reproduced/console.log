@@ -1,0 +1,9 @@
+PASS reservation_before_admission
+PASS admission_flavor_and_group_propagation
+PASS cancellation
+PASS restart_between_podgroup_and_ready
+PASS stale_ready_after_readmission
+PASS placement_timeout_and_quota_release
+PASS saturation_preserves_nominal
+PASS borrow_idle_quota
+PASS borrowing_and_lender_reclaim

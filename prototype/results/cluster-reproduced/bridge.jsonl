@@ -1,0 +1,47 @@
+{"event": "controller_started", "time": "2026-10-12T09:57:15.789533+00:00"}
+{"attempt": "792d46f36c9e4b469d81e9dafc39a2f5", "event": "check_written", "resource_version": "1554", "state": "Pending", "time": "2026-10-12T09:57:15.810209+00:00", "workload": "job-normal-b0d98"}
+{"attempt": "792d46f36c9e4b469d81e9dafc39a2f5", "event": "podgroup_created", "podgroup": "bridge-1a209e0e-792d46f36c9e4b469d81e9dafc39a2f5", "time": "2026-10-12T09:57:16.074913+00:00", "workload": "job-normal-b0d98"}
+{"attempt": "792d46f36c9e4b469d81e9dafc39a2f5", "event": "check_written", "resource_version": "1557", "state": "Ready", "time": "2026-10-12T09:57:16.090099+00:00", "workload": "job-normal-b0d98"}
+{"event": "controller_started", "time": "2026-10-12T09:57:22.711826+00:00"}
+{"attempt": "9447dd0c12de4c8ba97f74b06010c659", "event": "check_written", "resource_version": "1667", "state": "Pending", "time": "2026-10-12T09:57:22.733100+00:00", "workload": "job-restart-f387f"}
+{"attempt": "9447dd0c12de4c8ba97f74b06010c659", "event": "podgroup_created", "podgroup": "bridge-adabc808-9447dd0c12de4c8ba97f74b06010c659", "time": "2026-10-12T09:57:22.994374+00:00", "workload": "job-restart-f387f"}
+{"event": "controller_started", "time": "2026-10-12T09:57:23.465414+00:00"}
+{"attempt": "9447dd0c12de4c8ba97f74b06010c659", "event": "check_written", "resource_version": "1674", "state": "Ready", "time": "2026-10-12T09:57:23.493214+00:00", "workload": "job-restart-f387f"}
+{"attempt": "9447dd0c12de4c8ba97f74b06010c659", "event": "stale_write_rejected", "resource_version": "1680", "time": "2026-10-12T09:57:28.582108+00:00", "workload": "job-restart-f387f"}
+{"event": "controller_started", "time": "2026-10-12T09:57:28.750193+00:00"}
+{"event": "podgroup_deleted", "podgroup": "bridge-adabc808-9447dd0c12de4c8ba97f74b06010c659", "time": "2026-10-12T09:57:28.759057+00:00", "workload": "job-restart-f387f"}
+{"attempt": "0f051be5d13f4fdc8e0cb09bfb71eeea", "event": "check_written", "resource_version": "1756", "state": "Pending", "time": "2026-10-12T09:57:28.773697+00:00", "workload": "job-restart-f387f"}
+{"attempt": "0f051be5d13f4fdc8e0cb09bfb71eeea", "event": "podgroup_created", "podgroup": "bridge-adabc808-0f051be5d13f4fdc8e0cb09bfb71eeea", "time": "2026-10-12T09:57:29.036770+00:00", "workload": "job-restart-f387f"}
+{"attempt": "0f051be5d13f4fdc8e0cb09bfb71eeea", "event": "check_written", "resource_version": "1764", "state": "Ready", "time": "2026-10-12T09:57:29.057697+00:00", "workload": "job-restart-f387f"}
+{"attempt": "e68477b27a7c47559617e3818a10a71d", "event": "check_written", "resource_version": "1854", "state": "Pending", "time": "2026-10-12T09:57:34.953578+00:00", "workload": "job-impossible-7e87a"}
+{"attempt": "e68477b27a7c47559617e3818a10a71d", "event": "podgroup_created", "podgroup": "bridge-808a15b8-e68477b27a7c47559617e3818a10a71d", "time": "2026-10-12T09:57:35.219829+00:00", "workload": "job-impossible-7e87a"}
+{"attempt": "e68477b27a7c47559617e3818a10a71d", "event": "check_written", "resource_version": "1858", "state": "Ready", "time": "2026-10-12T09:57:35.240372+00:00", "workload": "job-impossible-7e87a"}
+{"attempt": "e68477b27a7c47559617e3818a10a71d", "event": "check_written", "resource_version": "1862", "state": "Retry", "time": "2026-10-12T09:57:55.174654+00:00", "workload": "job-impossible-7e87a"}
+{"event": "podgroup_deleted", "podgroup": "bridge-808a15b8-e68477b27a7c47559617e3818a10a71d", "time": "2026-10-12T09:57:55.437463+00:00", "workload": "job-impossible-7e87a"}
+{"attempt": "c4267576b67949159d38da2e4eb8282f", "event": "check_written", "resource_version": "1988", "state": "Pending", "time": "2026-10-12T09:57:55.752953+00:00", "workload": "job-prod-nominal-e7b8f"}
+{"attempt": "c4267576b67949159d38da2e4eb8282f", "event": "podgroup_created", "podgroup": "bridge-86483912-c4267576b67949159d38da2e4eb8282f", "time": "2026-10-12T09:57:56.020360+00:00", "workload": "job-prod-nominal-e7b8f"}
+{"attempt": "c4267576b67949159d38da2e4eb8282f", "event": "check_written", "resource_version": "1990", "state": "Ready", "time": "2026-10-12T09:57:56.041445+00:00", "workload": "job-prod-nominal-e7b8f"}
+{"attempt": "addd10d5aff94132b468645e5bdc234f", "event": "check_written", "resource_version": "2033", "state": "Pending", "time": "2026-10-12T09:57:57.714385+00:00", "workload": "job-dev-nominal-84a84"}
+{"attempt": "addd10d5aff94132b468645e5bdc234f", "event": "podgroup_created", "podgroup": "bridge-50ff08b3-addd10d5aff94132b468645e5bdc234f", "time": "2026-10-12T09:57:58.065152+00:00", "workload": "job-dev-nominal-84a84"}
+{"attempt": "addd10d5aff94132b468645e5bdc234f", "event": "check_written", "resource_version": "2035", "state": "Ready", "time": "2026-10-12T09:57:58.080119+00:00", "workload": "job-dev-nominal-84a84"}
+{"attempt": "417aaab5751f4e609ffe25703d153250", "event": "check_written", "resource_version": "2126", "state": "Pending", "time": "2026-10-12T09:58:06.835510+00:00", "workload": "job-prod-waits-c1994"}
+{"attempt": "417aaab5751f4e609ffe25703d153250", "event": "podgroup_created", "podgroup": "bridge-6424dda4-417aaab5751f4e609ffe25703d153250", "time": "2026-10-12T09:58:07.116448+00:00", "workload": "job-prod-waits-c1994"}
+{"attempt": "417aaab5751f4e609ffe25703d153250", "event": "check_written", "resource_version": "2133", "state": "Ready", "time": "2026-10-12T09:58:07.134814+00:00", "workload": "job-prod-waits-c1994"}
+{"event": "podgroup_deleted", "podgroup": "bridge-50ff08b3-addd10d5aff94132b468645e5bdc234f", "time": "2026-10-12T09:58:09.309207+00:00", "workload": "job-dev-nominal-84a84"}
+{"event": "podgroup_deleted", "podgroup": "bridge-86483912-c4267576b67949159d38da2e4eb8282f", "time": "2026-10-12T09:58:12.701782+00:00", "workload": "job-prod-nominal-e7b8f"}
+{"event": "podgroup_deleted", "podgroup": "bridge-6424dda4-417aaab5751f4e609ffe25703d153250", "time": "2026-10-12T09:58:16.397652+00:00", "workload": "job-prod-waits-c1994"}
+{"attempt": "c473065d8c6645eb957114884567067c", "event": "check_written", "resource_version": "2298", "state": "Pending", "time": "2026-10-12T09:58:16.736081+00:00", "workload": "job-prod-base-6c784"}
+{"attempt": "c473065d8c6645eb957114884567067c", "event": "podgroup_created", "podgroup": "bridge-f4695246-c473065d8c6645eb957114884567067c", "time": "2026-10-12T09:58:17.002896+00:00", "workload": "job-prod-base-6c784"}
+{"attempt": "c473065d8c6645eb957114884567067c", "event": "check_written", "resource_version": "2300", "state": "Ready", "time": "2026-10-12T09:58:17.045681+00:00", "workload": "job-prod-base-6c784"}
+{"attempt": "55e6b0e2451c4808a21b45c16281e706", "event": "check_written", "resource_version": "2345", "state": "Pending", "time": "2026-10-12T09:58:18.694086+00:00", "workload": "job-prod-borrow-413e9"}
+{"attempt": "55e6b0e2451c4808a21b45c16281e706", "event": "podgroup_created", "podgroup": "bridge-0f115294-55e6b0e2451c4808a21b45c16281e706", "time": "2026-10-12T09:58:18.970385+00:00", "workload": "job-prod-borrow-413e9"}
+{"attempt": "55e6b0e2451c4808a21b45c16281e706", "event": "check_written", "resource_version": "2348", "state": "Ready", "time": "2026-10-12T09:58:18.985183+00:00", "workload": "job-prod-borrow-413e9"}
+{"attempt": "734cf6da626f4e6691f607ae73c54887", "event": "check_written", "resource_version": "2426", "state": "Pending", "time": "2026-10-12T09:58:21.694563+00:00", "workload": "job-dev-reclaim-0230a"}
+{"attempt": "734cf6da626f4e6691f607ae73c54887", "event": "podgroup_created", "podgroup": "bridge-e02a970b-734cf6da626f4e6691f607ae73c54887", "time": "2026-10-12T09:58:21.988604+00:00", "workload": "job-dev-reclaim-0230a"}
+{"attempt": "734cf6da626f4e6691f607ae73c54887", "event": "check_written", "resource_version": "2432", "state": "Ready", "time": "2026-10-12T09:58:22.030004+00:00", "workload": "job-dev-reclaim-0230a"}
+{"event": "podgroup_deleted", "podgroup": "bridge-0f115294-55e6b0e2451c4808a21b45c16281e706", "time": "2026-10-12T09:58:27.566124+00:00", "workload": "job-prod-borrow-413e9"}
+{"attempt": "995ea89911924db7b37503ed055ed5ba", "event": "check_written", "resource_version": "2550", "state": "Pending", "time": "2026-10-12T09:58:30.627527+00:00", "workload": "job-prod-borrow-413e9"}
+{"attempt": "995ea89911924db7b37503ed055ed5ba", "event": "podgroup_created", "podgroup": "bridge-0f115294-995ea89911924db7b37503ed055ed5ba", "time": "2026-10-12T09:58:30.945866+00:00", "workload": "job-prod-borrow-413e9"}
+{"attempt": "995ea89911924db7b37503ed055ed5ba", "event": "check_written", "resource_version": "2553", "state": "Ready", "time": "2026-10-12T09:58:30.963821+00:00", "workload": "job-prod-borrow-413e9"}
+{"event": "podgroup_deleted", "podgroup": "bridge-f4695246-c473065d8c6645eb957114884567067c", "time": "2026-10-12T09:58:38.351233+00:00", "workload": "job-prod-base-6c784"}
+{"event": "podgroup_deleted", "podgroup": "bridge-0f115294-995ea89911924db7b37503ed055ed5ba", "time": "2026-10-12T09:58:42.411667+00:00", "workload": "job-prod-borrow-413e9"}

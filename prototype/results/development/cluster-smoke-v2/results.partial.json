@@ -1,0 +1,71 @@
+[
+  {
+    "case": "reservation_before_admission",
+    "passed": true,
+    "quota_reserved": true,
+    "job_suspended": true,
+    "pod_count": 0
+  },
+  {
+    "case": "admission_flavor_and_group_propagation",
+    "passed": true,
+    "workers": 2,
+    "attempt": "ef0c86d1830c497693cc507b7b28fd73"
+  },
+  {
+    "case": "cancellation",
+    "passed": true,
+    "pods_remaining": 0,
+    "quota_reserved": false
+  },
+  {
+    "case": "restart_between_podgroup_and_ready",
+    "passed": true,
+    "podgroup_reused": true
+  },
+  {
+    "case": "stale_ready_after_readmission",
+    "passed": true,
+    "old_attempt": "c2e8942a628b489fa281ceba7199f706",
+    "new_attempt": "a091d0436e274754affc09859f5b294c",
+    "http_conflict": 409
+  },
+  {
+    "case": "placement_timeout_and_quota_release",
+    "passed": true,
+    "eviction": {
+      "lastTransitionTime": "2026-10-12T09:44:06Z",
+      "message": "At least one admission check is false",
+      "observedGeneration": 1,
+      "reason": "AdmissionCheck",
+      "status": "True",
+      "type": "Evicted"
+    },
+    "quota_released": true
+  },
+  {
+    "case": "saturation_preserves_nominal",
+    "passed": true,
+    "prod_used": 2,
+    "dev_used": 2,
+    "new_prod_waits": true,
+    "observation_seconds": 6
+  },
+  {
+    "case": "borrow_idle_quota",
+    "passed": true,
+    "prod_used": 4,
+    "prod_nominal": 2,
+    "dev_used": 0
+  },
+  {
+    "case": "borrowing_and_lender_reclaim",
+    "passed": true,
+    "preempted": [
+      "prod-borrow"
+    ],
+    "dev_priority": 1000,
+    "prod_priority": 100000,
+    "explanation": "Dev reclaims its own nominal quota using Any; priority does not override nominal protection"
+  }
+]

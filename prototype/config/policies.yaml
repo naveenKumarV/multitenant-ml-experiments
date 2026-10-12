@@ -1,0 +1,151 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: prototype
+---
+apiVersion: kueue.x-k8s.io/v1beta1
+kind: ResourceFlavor
+metadata:
+  name: synthetic-shared
+spec:
+  nodeLabels:
+    prototype.example.com/pool: shared
+---
+apiVersion: kueue.x-k8s.io/v1beta1
+kind: AdmissionCheck
+metadata:
+  name: prototype-volcano
+spec:
+  controllerName: prototype.example.com/volcano-bridge
+  retryDelayMinutes: 1
+---
+apiVersion: kueue.x-k8s.io/v1beta1
+kind: Cohort
+metadata:
+  name: prototype
+---
+apiVersion: scheduling.k8s.io/v1
+kind: PriorityClass
+metadata:
+  name: prototype-prod
+value: 100000
+preemptionPolicy: Never
+globalDefault: false
+---
+apiVersion: kueue.x-k8s.io/v1beta1
+kind: ClusterQueue
+metadata:
+  name: prototype-prod
+spec:
+  cohort: prototype
+  namespaceSelector:
+    matchLabels:
+      kubernetes.io/metadata.name: prototype
+  preemption:
+    withinClusterQueue: Never
+    reclaimWithinCohort: Never
+    borrowWithinCohort:
+      policy: Never
+  admissionChecks:
+  - prototype-volcano
+  resourceGroups:
+  - coveredResources:
+    - example.com/accelerator
+    - cpu
+    - memory
+    flavors:
+    - name: synthetic-shared
+      resources:
+      - name: example.com/accelerator
+        nominalQuota: 2
+        borrowingLimit: 2
+        lendingLimit: 0
+      - name: cpu
+        nominalQuota: '4'
+        borrowingLimit: 0
+        lendingLimit: 0
+      - name: memory
+        nominalQuota: 2Gi
+        borrowingLimit: 0
+        lendingLimit: 0
+---
+apiVersion: kueue.x-k8s.io/v1beta1
+kind: LocalQueue
+metadata:
+  name: prod
+  namespace: prototype
+spec:
+  clusterQueue: prototype-prod
+---
+apiVersion: scheduling.k8s.io/v1
+kind: PriorityClass
+metadata:
+  name: prototype-dev
+value: 1000
+preemptionPolicy: Never
+globalDefault: false
+---
+apiVersion: kueue.x-k8s.io/v1beta1
+kind: ClusterQueue
+metadata:
+  name: prototype-dev
+spec:
+  cohort: prototype
+  namespaceSelector:
+    matchLabels:
+      kubernetes.io/metadata.name: prototype
+  preemption:
+    withinClusterQueue: Never
+    reclaimWithinCohort: Any
+    borrowWithinCohort:
+      policy: Never
+  admissionChecks:
+  - prototype-volcano
+  resourceGroups:
+  - coveredResources:
+    - example.com/accelerator
+    - cpu
+    - memory
+    flavors:
+    - name: synthetic-shared
+      resources:
+      - name: example.com/accelerator
+        nominalQuota: 2
+        borrowingLimit: 0
+        lendingLimit: 2
+      - name: cpu
+        nominalQuota: '4'
+        borrowingLimit: 0
+        lendingLimit: 0
+      - name: memory
+        nominalQuota: 2Gi
+        borrowingLimit: 0
+        lendingLimit: 0
+---
+apiVersion: kueue.x-k8s.io/v1beta1
+kind: LocalQueue
+metadata:
+  name: dev
+  namespace: prototype
+spec:
+  clusterQueue: prototype-dev
+---
+apiVersion: scheduling.volcano.sh/v1beta1
+kind: Queue
+metadata:
+  name: prototype
+spec:
+  weight: 1
+  reclaimable: false
+  capability:
+    example.com/accelerator: '4'
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: volcano-scheduler-configmap
+  namespace: volcano-system
+data:
+  volcano-scheduler.conf: "actions: \"enqueue, allocate\"\ntiers:\n- plugins:\n  -\
+    \ name: priority\n  - name: gang\n    enablePreemptable: false\n  - name: conformance\n\
+    - plugins:\n  - name: predicates\n  - name: proportion\n  - name: nodeorder\n"

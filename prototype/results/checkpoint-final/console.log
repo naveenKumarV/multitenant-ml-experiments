@@ -1,0 +1,27 @@
+PASS seed=7 sigterm: resume=35, exact state and sample/loss trace
+PASS seed=7 abrupt: resume=20, exact state and sample/loss trace
+PASS seed=7 missing_rank: resume=20, exact state and sample/loss trace
+PASS seed=7 torn_write: resume=20, exact state and sample/loss trace
+PASS seed=7 coordinator_before_manifest: resume=20, exact state and sample/loss trace
+PASS seed=7 coordinator_after_manifest: resume=35, exact state and sample/loss trace
+PASS negative control seed=7: omitting rng changes model
+PASS negative control seed=7: omitting data changes model
+PASS negative control seed=7: omitting optimizer changes model
+PASS seed=19 sigterm: resume=35, exact state and sample/loss trace
+PASS seed=19 abrupt: resume=20, exact state and sample/loss trace
+PASS seed=19 missing_rank: resume=20, exact state and sample/loss trace
+PASS seed=19 torn_write: resume=20, exact state and sample/loss trace
+PASS seed=19 coordinator_before_manifest: resume=20, exact state and sample/loss trace
+PASS seed=19 coordinator_after_manifest: resume=35, exact state and sample/loss trace
+PASS negative control seed=19: omitting rng changes model
+PASS negative control seed=19: omitting data changes model
+PASS negative control seed=19: omitting optimizer changes model
+PASS seed=41 sigterm: resume=35, exact state and sample/loss trace
+PASS seed=41 abrupt: resume=20, exact state and sample/loss trace
+PASS seed=41 missing_rank: resume=20, exact state and sample/loss trace
+PASS seed=41 torn_write: resume=20, exact state and sample/loss trace
+PASS seed=41 coordinator_before_manifest: resume=20, exact state and sample/loss trace
+PASS seed=41 coordinator_after_manifest: resume=35, exact state and sample/loss trace
+PASS negative control seed=41: omitting rng changes model
+PASS negative control seed=41: omitting data changes model
+PASS negative control seed=41: omitting optimizer changes model

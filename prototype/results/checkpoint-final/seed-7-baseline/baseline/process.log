@@ -1,0 +1,1 @@
+W1012 02:40:11.229000 58261 .venv/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.

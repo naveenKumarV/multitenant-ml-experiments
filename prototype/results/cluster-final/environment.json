@@ -1,0 +1,133 @@
+{
+  "captured_utc": "2026-10-12T09:49:15.042885+00:00",
+  "platform": "macOS-27.0-arm64-arm-64bit",
+  "architecture": "arm64",
+  "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+  "torch": "2.9.1",
+  "kubernetes": "v1.33.1",
+  "packages": "certifi==2026.7.22\ncffi==2.1.1\ncharset-normalizer==3.5.2\ncryptography==50.0.2\ndurationpy==0.11\nfilelock==4.1.1\nfsspec==2026.9.0\ngoogle-auth==2.61.0\nidna==3.20\njinja2==3.1.6\nkubernetes==33.1.0\nmarkupsafe==3.0.4\nmpmath==1.3.0\nnetworkx==3.7\nnumpy==2.2.6\noauthlib==4.0.0\npyasn1==0.6.4\npyasn1-modules==0.4.2\npycparser==3.11\npython-dateutil==2.9.0.post0\npyyaml==6.0.3\nrequests==2.34.2\nrequests-oauthlib==2.0.0\nsetuptools==84.0.0\nsix==1.17.0\nsympy==1.14.0\ntorch==2.9.1\ntyping-extensions==4.16.0\nurllib3==2.8.0\nwebsocket-client==1.9.2\n",
+  "nodes": [
+    {
+      "name": "scholarly-prototype-control-plane",
+      "os": "Debian GNU/Linux 12 (bookworm)",
+      "kernel": "6.8.0-117-generic",
+      "container_runtime": "containerd://2.1.1",
+      "allocatable": {
+        "cpu": "4",
+        "ephemeral-storage": "30785444Ki",
+        "hugepages-1Gi": "0",
+        "hugepages-2Mi": "0",
+        "hugepages-32Mi": "0",
+        "hugepages-64Ki": "0",
+        "memory": "8113564Ki",
+        "pods": "110"
+      }
+    },
+    {
+      "name": "scholarly-prototype-worker",
+      "os": "Debian GNU/Linux 12 (bookworm)",
+      "kernel": "6.8.0-117-generic",
+      "container_runtime": "containerd://2.1.1",
+      "allocatable": {
+        "cpu": "4",
+        "ephemeral-storage": "30785444Ki",
+        "example.com/accelerator": "2",
+        "hugepages-1Gi": "0",
+        "hugepages-2Mi": "0",
+        "hugepages-32Mi": "0",
+        "hugepages-64Ki": "0",
+        "memory": "8113564Ki",
+        "pods": "110"
+      }
+    },
+    {
+      "name": "scholarly-prototype-worker2",
+      "os": "Debian GNU/Linux 12 (bookworm)",
+      "kernel": "6.8.0-117-generic",
+      "container_runtime": "containerd://2.1.1",
+      "allocatable": {
+        "cpu": "4",
+        "ephemeral-storage": "30785444Ki",
+        "example.com/accelerator": "2",
+        "hugepages-1Gi": "0",
+        "hugepages-2Mi": "0",
+        "hugepages-32Mi": "0",
+        "hugepages-64Ki": "0",
+        "memory": "8113564Ki",
+        "pods": "110"
+      }
+    }
+  ],
+  "controller_images": [
+    {
+      "namespace": "kueue-system",
+      "pod": "kueue-controller-manager-6d9d757d8c-tc6gm",
+      "images": [
+        {
+          "name": "manager",
+          "image": "registry.k8s.io/kueue/kueue:v0.17.0",
+          "image_id": "registry.k8s.io/kueue/kueue@sha256:368d2053ffd9783d4e7e76405d0c7e43917b307050f10b362a71c5890d379df0"
+        }
+      ]
+    },
+    {
+      "namespace": "volcano-system",
+      "pod": "volcano-admission-65579b9fc4-5qthh",
+      "images": [
+        {
+          "name": "admission",
+          "image": "docker.io/volcanosh/vc-webhook-manager:v1.13.0",
+          "image_id": "docker.io/volcanosh/vc-webhook-manager@sha256:03e36eb220766397b4cd9c2f42bab8666661a0112fa9033ae9bd80d2a9611001"
+        }
+      ]
+    },
+    {
+      "namespace": "volcano-system",
+      "pod": "volcano-admission-init-dklrz",
+      "images": [
+        {
+          "name": "main",
+          "image": "docker.io/volcanosh/vc-webhook-manager:v1.13.0",
+          "image_id": "docker.io/volcanosh/vc-webhook-manager@sha256:03e36eb220766397b4cd9c2f42bab8666661a0112fa9033ae9bd80d2a9611001"
+        }
+      ]
+    },
+    {
+      "namespace": "volcano-system",
+      "pod": "volcano-controllers-76f4c4c88d-qbghm",
+      "images": [
+        {
+          "name": "volcano-controllers",
+          "image": "docker.io/volcanosh/vc-controller-manager:v1.13.0",
+          "image_id": "docker.io/volcanosh/vc-controller-manager@sha256:8dd7ce0cef2df19afb14ba26bec90e2999a3c0397ebe5c9d75a5f68d1c80d242"
+        }
+      ]
+    },
+    {
+      "namespace": "volcano-system",
+      "pod": "volcano-scheduler-55d44598dc-4cg5t",
+      "images": [
+        {
+          "name": "volcano-scheduler",
+          "image": "docker.io/volcanosh/vc-scheduler:v1.13.0",
+          "image_id": "docker.io/volcanosh/vc-scheduler@sha256:b05b30b3c25eff5af77e1859f47fc6acfc3520d62dc2838f0623aa4309c40b34"
+        }
+      ]
+    }
+  ],
+  "sources": {
+    "src/bridge.py": "5b3be0106003ed16655de97818ffb23d7a9db348550a994ffb43f4ec3c67cdde",
+    "src/checkpoint_worker.py": "e7bef4c1604f9108fe341def5087bd5fad0448ec95d49e548ab816a60415c878",
+    "scripts/capture_environment.py": "95cba9b69feb7340eda95c84ab802a0a28f2599d9ce6f87814e697f87b96027f",
+    "scripts/configure_cluster.py": "468f44dcad56135287ed02638e269a4c1871e7d77f5e2baa5101543f3c5be138",
+    "scripts/run_checkpoint.py": "e4a8d5120b44febc90a48a1c317872576bff2b2b23cbce15268d5cd0735f4e68",
+    "scripts/run_cluster.py": "a6f321b4d997af76fc034a20d81bb28019595707972ba95e05316f828be1fa49",
+    "scripts/setup_cluster.sh": "c79c28ad0a9847719318f10721395b3e3ce12c4a109e990d4edc5e235b07267c",
+    "scripts/verify_vendor.py": "4566411ddadb7652b680b1b9c49d98e13782a68266b20a170fab7201eadb57d6",
+    "config/kind.yaml": "5014a27476d213aeec1da518c7f1f665fe4a00ba5114ee50814b67b759e4ff98",
+    "config/policies.yaml": "123f5217fd8d99d9f51047009205b37c945640eb3b7ff8a8270b190c2bcde076",
+    "vendor/kueue-v0.17.0.yaml": "cb6b837a1d9520d6d53ff7bcb70b593280eedf699efdec59ae3a713f8a90f83d",
+    "vendor/manifest.json": "b4bc62fc5cc38ae351257de9befd5bf9845c302b9f18a489fe694a781b946a54",
+    "vendor/volcano-v1.13.0.yaml": "d9c36a587a6ac970f5d13e91f95fc53d1b21119b3781496f760b510aaf28b1ea"
+  }
+}

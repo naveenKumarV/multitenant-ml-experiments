@@ -1,0 +1,252 @@
+{
+  "created_utc": "2026-10-12T09:58:42.695789+00:00",
+  "kubernetes": "v1.33.1",
+  "kueue": "v0.17.0",
+  "volcano": "v1.13.0",
+  "synthetic_accelerators": 4,
+  "physical_gpus": 0,
+  "cases": [
+    {
+      "case": "reservation_before_admission",
+      "passed": true,
+      "quota_reserved": true,
+      "job_suspended": true,
+      "pod_count": 0
+    },
+    {
+      "case": "admission_flavor_and_group_propagation",
+      "passed": true,
+      "workers": 2,
+      "attempt": "792d46f36c9e4b469d81e9dafc39a2f5"
+    },
+    {
+      "case": "cancellation",
+      "passed": true,
+      "pods_remaining": 0,
+      "quota_reserved": false
+    },
+    {
+      "case": "restart_between_podgroup_and_ready",
+      "passed": true,
+      "podgroup_reused": true
+    },
+    {
+      "case": "stale_ready_after_readmission",
+      "passed": true,
+      "old_attempt": "9447dd0c12de4c8ba97f74b06010c659",
+      "new_attempt": "0f051be5d13f4fdc8e0cb09bfb71eeea",
+      "http_conflict": 409
+    },
+    {
+      "case": "placement_timeout_and_quota_release",
+      "passed": true,
+      "eviction": {
+        "lastTransitionTime": "2026-10-12T09:57:55Z",
+        "message": "At least one admission check is false",
+        "observedGeneration": 1,
+        "reason": "AdmissionCheck",
+        "status": "True",
+        "type": "Evicted"
+      },
+      "quota_released": true
+    },
+    {
+      "case": "saturation_preserves_nominal",
+      "passed": true,
+      "prod_used": 2,
+      "dev_used": 2,
+      "new_prod_waits": true,
+      "observation_seconds": 6
+    },
+    {
+      "case": "borrow_idle_quota",
+      "passed": true,
+      "prod_used": 4,
+      "prod_nominal": 2,
+      "dev_used": 0
+    },
+    {
+      "case": "borrowing_and_lender_reclaim",
+      "passed": true,
+      "preempted": [
+        "prod-borrow"
+      ],
+      "dev_priority": 1000,
+      "prod_priority": 100000,
+      "explanation": "Dev reclaims its own nominal quota using Any; priority does not override nominal protection"
+    }
+  ],
+  "quota_release_observations": [
+    {
+      "job": "normal",
+      "time": "2026-10-12T09:57:18.600828+00:00",
+      "quota_reserved": false,
+      "remaining_pods": [
+        {
+          "name": "normal-0-ptrk8",
+          "phase": "Running",
+          "deleting": true
+        },
+        {
+          "name": "normal-1-98rvc",
+          "phase": "Running",
+          "deleting": true
+        }
+      ]
+    },
+    {
+      "job": "normal",
+      "time": "2026-10-12T09:57:22.276465+00:00",
+      "quota_reserved": false,
+      "remaining_pods": []
+    },
+    {
+      "job": "restart",
+      "time": "2026-10-12T09:57:24.555005+00:00",
+      "quota_reserved": false,
+      "remaining_pods": [
+        {
+          "name": "restart-0-w6wt2",
+          "phase": "Running",
+          "deleting": true
+        },
+        {
+          "name": "restart-1-b5ms2",
+          "phase": "Running",
+          "deleting": true
+        }
+      ]
+    },
+    {
+      "job": "restart",
+      "time": "2026-10-12T09:57:30.662856+00:00",
+      "quota_reserved": false,
+      "remaining_pods": [
+        {
+          "name": "restart-0-m2tcs",
+          "phase": "Running",
+          "deleting": true
+        },
+        {
+          "name": "restart-1-8btbh",
+          "phase": "Running",
+          "deleting": true
+        }
+      ]
+    },
+    {
+      "job": "impossible",
+      "time": "2026-10-12T09:57:55.536320+00:00",
+      "quota_reserved": false,
+      "remaining_pods": []
+    },
+    {
+      "job": "impossible",
+      "time": "2026-10-12T09:57:55.571840+00:00",
+      "quota_reserved": false,
+      "remaining_pods": []
+    },
+    {
+      "job": "dev-nominal",
+      "time": "2026-10-12T09:58:05.752350+00:00",
+      "quota_reserved": false,
+      "remaining_pods": [
+        {
+          "name": "dev-nominal-0-qjpnv",
+          "phase": "Running",
+          "deleting": true
+        },
+        {
+          "name": "dev-nominal-1-m6ndk",
+          "phase": "Running",
+          "deleting": true
+        }
+      ]
+    },
+    {
+      "job": "prod-nominal",
+      "time": "2026-10-12T09:58:09.656034+00:00",
+      "quota_reserved": false,
+      "remaining_pods": [
+        {
+          "name": "prod-nominal-0-lth7g",
+          "phase": "Running",
+          "deleting": true
+        },
+        {
+          "name": "prod-nominal-1-6jch4",
+          "phase": "Running",
+          "deleting": true
+        }
+      ]
+    },
+    {
+      "job": "prod-waits",
+      "time": "2026-10-12T09:58:12.983964+00:00",
+      "quota_reserved": false,
+      "remaining_pods": [
+        {
+          "name": "prod-waits-0-9sxjf",
+          "phase": "Running",
+          "deleting": true
+        },
+        {
+          "name": "prod-waits-1-rnb2k",
+          "phase": "Running",
+          "deleting": true
+        }
+      ]
+    },
+    {
+      "job": "dev-reclaim",
+      "time": "2026-10-12T09:58:29.530451+00:00",
+      "quota_reserved": false,
+      "remaining_pods": [
+        {
+          "name": "dev-reclaim-0-2t2bq",
+          "phase": "Running",
+          "deleting": true
+        },
+        {
+          "name": "dev-reclaim-1-bf72v",
+          "phase": "Running",
+          "deleting": true
+        }
+      ]
+    },
+    {
+      "job": "prod-base",
+      "time": "2026-10-12T09:58:34.512764+00:00",
+      "quota_reserved": false,
+      "remaining_pods": [
+        {
+          "name": "prod-base-0-jz2dp",
+          "phase": "Running",
+          "deleting": true
+        },
+        {
+          "name": "prod-base-1-9gqhm",
+          "phase": "Running",
+          "deleting": true
+        }
+      ]
+    },
+    {
+      "job": "prod-borrow",
+      "time": "2026-10-12T09:58:38.557336+00:00",
+      "quota_reserved": false,
+      "remaining_pods": [
+        {
+          "name": "prod-borrow-0-bjqb9",
+          "phase": "Running",
+          "deleting": true
+        },
+        {
+          "name": "prod-borrow-1-m5rcl",
+          "phase": "Running",
+          "deleting": true
+        }
+      ]
+    }
+  ]
+}
